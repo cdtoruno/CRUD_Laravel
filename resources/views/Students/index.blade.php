@@ -1,0 +1,39 @@
+@extends('layouts.app')
+
+@section('content')
+
+<div class="container">
+    <h2>Estudiantes</h2>
+</div>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>CIF</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+                <th>Telefono</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($students as $student)
+            <tr>
+                <td>{{$student->cif}}</td>
+                <td>{{$student->name}}</td>
+                <td>{{$student->lastname}}</td>
+                <td>{{$student->email}}</td>
+                <td>{{$student->phone}}</td>
+                <td>{{$student->acciones}}</td>
+                <td>
+                    <!--  
+                    
+                    </form>-->
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+   
+</div>
+@endsection
